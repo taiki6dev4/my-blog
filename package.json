@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -H 0.0.0.0",
-    "build": "next build --turbopack",
+    "build": "prisma generate && prisma migrate deploy && next build --turbopack",
     "start": "next start",
     "test": "jest",
     "test:watch": "jest --watch",
-    "create-users": "tsx scripts/create-users.ts"
+    "create-users": "tsx scripts/create-users.ts",
+    "postinstall": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:seed": "tsx scripts/create-users.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.17.1",
