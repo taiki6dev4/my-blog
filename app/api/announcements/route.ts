@@ -115,7 +115,7 @@ async function sendPushNotifications(announcement: any) {
 
     if (process.env.VAPID_PUBLIC_KEY && process.env.VAPID_PRIVATE_KEY) {
       webpush.setVapidDetails(
-        'mailto:your-email@example.com',
+        'mailto:taiki6dev4@gmail.com',
         process.env.VAPID_PUBLIC_KEY,
         process.env.VAPID_PRIVATE_KEY
       )
